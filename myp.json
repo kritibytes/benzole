@@ -2,13 +2,7 @@
     "author": "kritibytes",
     "author_email": "kritibytes@gmail.com",
     "config": {},
-    "dependencies": {
-        "common": [],
-        "dev": [],
-        "prod": []
-    },
     "description": "Create web apps with new way",
-    "environment": "",
     "name": "benzole",
     "scripts": {
         "deploy": {
@@ -22,5 +16,5 @@
     },
     "url": "https://github.com/kritibytes/benzole",
     "use_environment": true,
-    "version": "0.0.1"
+    "version": "0.0.2"
 }

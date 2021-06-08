@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 click = "*"
+myp = "*"
 
 [dev-packages]
 autopep8 = "*"
@@ -12,7 +13,6 @@ pylint = "*"
 twine = "*"
 setuptools = "*"
 wheel = "*"
-myp = "*"
 
 [requires]
 python_version = "3.8"

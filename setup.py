@@ -1,3 +1,4 @@
+from pkg_resources import Requirement
 import setuptools
 from myp import MYPReader
 
@@ -5,6 +6,8 @@ with open("README.md","r") as fh:
     long_description = fh.read()
 
 myp = MYPReader()
+
+requirements = myp.get_dependencies()
 
 setuptools.setup(
     name=myp.get_data("name"),
@@ -23,7 +26,7 @@ setuptools.setup(
         "Topic :: Software Development",
         "Natural Language :: English"
     ],
-    install_requires=myp.get_dependencies("prod"),
-    setup_requires=myp.get_dependencies("prod"),
+    install_requires=requirements,
+    setup_requires=requirements,
     python_requires='>=3.6'
 )
