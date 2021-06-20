@@ -1,16 +1,15 @@
 class Route:
-    
-    def GET(self):
+    def get(self):
         return None
-    
-    def POST(self):
+
+    def post(self):
         return None
-    
-    def PUT(self):
+
+    def put(self):
         return None
-    
-    def PATCH(self):
+
+    def patch(self):
         return None
-    
-    def DELETE(self):
+
+    def delete(self):
         return None

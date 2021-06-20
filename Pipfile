@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 click = "*"
 myp = "*"
+pylint = "*"
 
 [dev-packages]
 autopep8 = "*"
