@@ -30,13 +30,13 @@ def routes_mapper(files_map: List[str]) -> List[Route]:
             route_name = route[-1].split('.')[0]
             route_name = "" if route_name == "index" else route_name
             route[-1] = route_name
-            
+
             url = "/".join(route)
-            
-            spec: Any = importlib.util.spec_from_file_location("route__"+url.replace("/","_"),file)
+
+            spec: Any = importlib.util.spec_from_file_location("route__"+url.replace("/", "_"), file)
             handler: Any = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(handler)
-            
-            routes.append({"url": url,"handler":handler.Default()})
+
+            routes.append({"url": url, "handler": handler.Default()})
 
     return routes
