@@ -1,8 +1,10 @@
-from pkg_resources import Requirement
+"""
+Setup file
+"""
 import setuptools
 from myp import MYPReader
 
-with open("README.md","r") as fh:
+with open("README.md", "r") as fh:
     long_description = fh.read()
 
 myp = MYPReader()
