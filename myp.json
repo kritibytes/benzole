@@ -12,6 +12,10 @@
         "predeploy": {
             "command": "python setup.py sdist bdist_wheel",
             "description": "Build package"
+        },
+        "test": {
+            "command": "python playground.py",
+            "description": ""
         }
     },
     "url": "https://github.com/kritibytes/benzole",
