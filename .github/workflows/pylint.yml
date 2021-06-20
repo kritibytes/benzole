@@ -18,7 +18,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv
         pipenv install
-        pipenv install pylint
     - name: Analysing the code with pylint
       run: |
         pipenv run pylint `ls -R|grep .py$|xargs`
