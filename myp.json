@@ -14,7 +14,7 @@
             "description": "Build package"
         },
         "test": {
-            "command": "python -m unittest",
+            "command": "pytest",
             "description": ""
         }
     },

@@ -141,3 +141,4 @@ cython_debug/
 .vscode
 playground
 playground.py
+.pytest_cache

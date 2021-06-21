@@ -1,3 +1,5 @@
+from benzole.utils.types import IRoute
+from benzole.core.route import Route
 import os
 import unittest
 from benzole.utils.mapper import (
@@ -5,7 +7,8 @@ from benzole.utils.mapper import (
     routes_mapper
 )
 
-os.chdir(os.path.abspath(os.path.join(__file__,'..')))
+os.chdir(os.path.abspath(os.path.join(__file__, '..')))
+
 
 class TestMapper(unittest.TestCase):
 
@@ -13,10 +16,10 @@ class TestMapper(unittest.TestCase):
         self.files_map = files_mapper()
 
     def test_files_mapper(self):
-        print('\nTesting files_mapper',end=' ')
-        self.assertEqual(1,1)
+        """Testing files_mapper"""
+        self.assertEqual(self.files_map, ['src/index.py', 'src/api/users.py'])
 
     def test_routes_mapper(self):
-        print('\nTesting routes_mapper',end=' ')
+        """Testing routes_mapper"""
         routes_map = routes_mapper(self.files_map)
-        self.assertEqual(1,1)
+        self.assertEqual(len(routes_map),1)
