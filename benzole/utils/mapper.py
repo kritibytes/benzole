@@ -37,6 +37,7 @@ def routes_mapper(files_map: List[str]) -> List[Route]:
             handler: Any = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(handler)
 
-            routes.append({"url": url, "handler": handler.Default()})
+            if "Default" in dir(handler):
+                routes.append({"url": url, "handler": handler.Default()})
 
     return routes
