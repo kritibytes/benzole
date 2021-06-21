@@ -1,5 +1,5 @@
 from typing import Any, TypedDict
 
-class Route(TypedDict):
+class IRoute(TypedDict):
     url: str
     handler: Any

@@ -14,7 +14,7 @@
             "description": "Build package"
         },
         "test": {
-            "command": "python playground.py",
+            "command": "python -m unittest",
             "description": ""
         }
     },
