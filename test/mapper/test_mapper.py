@@ -22,4 +22,4 @@ class TestMapper(unittest.TestCase):
     def test_routes_mapper(self):
         """Testing routes_mapper"""
         routes_map = routes_mapper(self.files_map)
-        self.assertEqual(len(routes_map),1)
+        self.assertEqual(len(routes_map), 1)

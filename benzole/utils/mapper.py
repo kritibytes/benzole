@@ -1,4 +1,3 @@
-from cgitb import handler
 import os
 from typing import Any, List
 from .types import IRoute
@@ -26,14 +25,14 @@ def routes_mapper(files_map: List[str]) -> List[IRoute]:
 
     for file in files_map:
         if file.endswith(".py"):
-            route: List[str] = file[file.find('src/')+3:].split(slash)
+            route: List[str] = file[file.find('src/') + 3:].split(slash)
             route_name: str = route[-1].split('.')[0]
             route_name: str = "" if route_name == "index" else route_name
             route[-1] = route_name
 
             url = "/".join(route)
 
-            spec: Any = importlib.util.spec_from_file_location("route__"+url.replace("/", "_"), file)
+            spec: Any = importlib.util.spec_from_file_location("route__" + url.replace("/", "_"), file)
             handler: Any = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(handler)
 

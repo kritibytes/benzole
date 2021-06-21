@@ -9,13 +9,21 @@
             "command": "python -m twine upload --skip-existing --repository-url https://upload.pypi.org/legacy/ dist/*",
             "description": "Upload to PYPI"
         },
+        "lint": {
+            "command": "flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --ignore=F401",
+            "description": "Lint package"
+        },
+        "check":{
+            "command": "flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics",
+            "description": "Check for errors in code"
+        },
         "predeploy": {
             "command": "python setup.py sdist bdist_wheel",
             "description": "Build package"
         },
         "test": {
             "command": "pytest",
-            "description": ""
+            "description": "Test package"
         }
     },
     "url": "https://github.com/kritibytes/benzole",

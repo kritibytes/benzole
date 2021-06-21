@@ -7,8 +7,8 @@ name = "pypi"
 click = "*"
 myp = "*"
 pylint = "*"
-unittest-prettify = "*"
 pytest = "*"
+flake8 = "*"
 
 [dev-packages]
 autopep8 = "*"
