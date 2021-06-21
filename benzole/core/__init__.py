@@ -1,3 +1,3 @@
-from .route import (
-    Route
+from .view import (
+    DefaultView
 )

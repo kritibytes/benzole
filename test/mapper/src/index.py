@@ -1,5 +1,5 @@
-from benzole import Route
+from benzole import DefaultView
 
 
-class Default(Route):
+class Default(DefaultView):
     pass

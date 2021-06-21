@@ -1,5 +1,3 @@
-from benzole.utils.types import IRoute
-from benzole.core.route import Route
 import os
 import unittest
 from benzole.utils.mapper import (
@@ -7,12 +5,13 @@ from benzole.utils.mapper import (
     routes_mapper
 )
 
-os.chdir(os.path.abspath(os.path.join(__file__, '..')))
+print(os.getcwd())
 
 
 class TestMapper(unittest.TestCase):
 
     def setUp(self) -> None:
+        os.chdir(os.path.abspath(os.path.join(__file__, '..')))
         self.files_map = files_mapper()
 
     def test_files_mapper(self):

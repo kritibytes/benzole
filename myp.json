@@ -21,6 +21,19 @@
             "command": "python setup.py sdist bdist_wheel",
             "description": "Build package"
         },
+
+        "cov-run":{
+            "command":"coverage run --source=. --omit=setup.py -m pytest",
+            "description": "Run coverage"
+        },
+        "cov-report":{
+            "command":"coverage report",
+            "description": "Report coverage"
+        },
+        "cov-html":{
+            "command":"coverage html",
+            "description": "Report coverage"
+        },
         "test": {
             "command": "pytest",
             "description": "Test package"

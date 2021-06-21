@@ -1,3 +1,3 @@
 from .core import (
-    Route
+    DefaultView
 )
