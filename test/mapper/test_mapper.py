@@ -17,7 +17,7 @@ class TestMapper(unittest.TestCase):
 
     def test_files_mapper(self):
         """Testing files_mapper"""
-        self.assertEqual(self.files_map, ['src/index.py', 'src/api/users.py'])
+        self.assertEqual(self.files_map.sort(), ['src/index.py', 'src/api/users.py'].sort())
 
     def test_routes_mapper(self):
         """Testing routes_mapper"""
