@@ -26,9 +26,11 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install pipenv myp
         pipenv install
-    - name: Lint with flake8
+    - name: Check for errors with flake8
       run: |
         myp run check
+    - name: Lin with flake8
+      run: |
         myp run lint
     - name: Test with pytest
       run: |
