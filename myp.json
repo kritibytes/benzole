@@ -13,7 +13,7 @@
             "command": "flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --ignore=F401",
             "description": "Lint package"
         },
-        "check":{
+        "check": {
             "command": "flake8 . --count --select=E9,F63,F7,F82 --statistics",
             "description": "Check for errors in code"
         },
@@ -21,21 +21,20 @@
             "command": "python setup.py sdist bdist_wheel",
             "description": "Build package"
         },
-
-        "cov-run":{
-            "command":"coverage run --source=. --omit=setup.py -m pytest",
+        "cov-run": {
+            "command": "coverage run --source=. --omit=setup.py -m pytest",
             "description": "Run coverage"
         },
-        "cov-report":{
-            "command":"coverage report",
+        "cov-report": {
+            "command": "coverage report",
             "description": "Report coverage"
         },
-        "cov-html":{
-            "command":"coverage html",
+        "cov-html": {
+            "command": "coverage html",
             "description": "Report coverage"
         },
-        "upload-coverage":{
-            "command": "pytest --cov=./",
+        "pytest-cov": {
+            "command": "pytest --cov-report term-missing --cov=./benzole",
             "description": "Create coverage report"
         },
         "test": {
