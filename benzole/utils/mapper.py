@@ -24,19 +24,18 @@ def routes_mapper(files_map: List[str]) -> List[IRoute]:
     routes: List[IRoute] = []
 
     for file in files_map:
-        if file.endswith(".py"):
-            route: List[str] = file[file.find('src/') + 3:].split(slash)
-            route_name: str = route[-1].split('.')[0]
-            route_name: str = "" if route_name == "index" else route_name
-            route[-1] = route_name
+        route: List[str] = file[file.find('src/') + 3:].split(slash)
+        route_name: str = route[-1].split('.')[0]
+        route_name: str = "" if route_name == "index" else route_name
+        route[-1] = route_name
 
-            url = "/".join(route)
+        url = "/".join(route)
 
-            spec: Any = importlib.util.spec_from_file_location("route__" + url.replace("/", "_"), file)
-            handler: Any = importlib.util.module_from_spec(spec)
-            spec.loader.exec_module(handler)
+        spec: Any = importlib.util.spec_from_file_location("route__" + url.replace("/", "_"), file)
+        handler: Any = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(handler)
 
-            if "Default" in dir(handler):
-                routes.append({"url": url, "handler": handler.Default()})
+        if "Default" in dir(handler):
+            routes.append({"url": url, "handler": handler.Default()})
 
     return routes
