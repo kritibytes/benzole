@@ -21,18 +21,6 @@
             "command": "python setup.py sdist bdist_wheel",
             "description": "Build package"
         },
-        "cov-run": {
-            "command": "coverage run --source=. --omit=setup.py -m pytest",
-            "description": "Run coverage"
-        },
-        "cov-report": {
-            "command": "coverage report",
-            "description": "Report coverage"
-        },
-        "cov-html": {
-            "command": "coverage html",
-            "description": "Report coverage"
-        },
         "pytest-cov": {
             "command": "pytest --cov-report term-missing --cov=./benzole",
             "description": "Create coverage report"
@@ -44,5 +32,5 @@
     },
     "url": "https://github.com/kritibytes/benzole",
     "use_environment": true,
-    "version": "0.0.2"
+    "version": "0.0.1"
 }
