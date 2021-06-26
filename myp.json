@@ -34,8 +34,8 @@
             "command":"coverage html",
             "description": "Report coverage"
         },
-        "coverage":{
-            "command": "pytest --cov=./ --cov-report=xml",
+        "upload-coverage":{
+            "command": "pytest --cov=./",
             "description": "Create coverage report"
         },
         "test": {

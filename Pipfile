@@ -11,6 +11,7 @@ pytest = "*"
 flake8 = "*"
 coverage = "*"
 pytest-cov = "*"
+pytest-codecov = "*"
 
 [dev-packages]
 autopep8 = "*"
