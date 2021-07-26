@@ -5,8 +5,6 @@ from benzole.utils.mapper import (
     routes_mapper
 )
 
-print(os.getcwd())
-
 
 class TestMapper(unittest.TestCase):
 

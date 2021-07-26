@@ -1,7 +1,5 @@
-import os
 import unittest
 from benzole.core.response import Response
-import json
 
 
 class TestResponse(unittest.TestCase):
@@ -12,6 +10,11 @@ class TestResponse(unittest.TestCase):
         data = {"name": "John", "age": 26}
         response: Response = Response.json(data).status(201)
         self.assertEqual(response.body, '{"name": "John", "age": 26}')
-        self.assertEqual(response.headers, [('Content-Type', 'application/json')])
         self.assertEqual(response.status_code, "201")
-        
+        self.assertEqual(response.headers, [('Content-Type', 'application/json')])
+
+        response.set_headers({"AppName": "Benzole"})
+        self.assertEqual(response.headers, [('AppName', 'Benzole')])
+
+        response.add_header({"Company": "Kritibytes"})
+        self.assertEqual(response.headers.sort(), [('AppName', 'Benzole'), ('Company', 'Kritibytes')].sort())
