@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PYTHON_VERSION: 3.8
-    strategy:
-      fail-fast: false
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ env.PYTHON_VERSION }}

@@ -139,6 +139,6 @@ cython_debug/
 
 # VS Code settings
 .vscode
-playground
+playground/
 playground.py
 .pytest_cache

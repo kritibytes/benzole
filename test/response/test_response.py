@@ -6,13 +6,12 @@ import json
 
 class TestResponse(unittest.TestCase):
 
-    def test_response_object(self):
+    def test_response_json(self):
+
+        # Testing json response
         data = {"name": "John", "age": 26}
-        data_json = json.dumps(data)
-        response = Response("200", "application/json", {"ApplicationName": "Benzole"}, data_json)
-        print(response.headers)
-        self.assertEqual(response.headers.sort(), [('Content-Type', 'application/json'), ('ApplicationName', 'Benzole')].sort())
-        self.assertEqual(response.status_code, "200")
-        self.assertEqual(response.body, data_json)
-        response.add_header({"UserName": "yunisdev"})
-        self.assertEqual(response.headers.sort(), [('Content-Type', 'application/json'), ('ApplicationName', 'Benzole'), ('UserName', 'yunisdev')].sort())
+        response: Response = Response.json(data).status(201)
+        self.assertEqual(response.body, '{"name": "John", "age": 26}')
+        self.assertEqual(response.headers, [('Content-Type', 'application/json')])
+        self.assertEqual(response.status_code, "201")
+        

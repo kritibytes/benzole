@@ -1,11 +1,12 @@
 from typing import (
-    Any, 
-    TypedDict, 
-    Dict, 
+    Any,
+    TypedDict,
+    Dict,
     Union,
     Tuple,
     List
 )
+from enum import Enum
 
 
 class IRoute(TypedDict):
@@ -13,5 +14,13 @@ class IRoute(TypedDict):
     handler: Any
 
 
-IHeader = Dict[str, Union[str]]
+IHeader = Dict[str, str]
 IHeaderList = List[Tuple[str, str]]
+
+
+class HTTP_Method(Enum):
+    POST = "POST"
+    GET = "GET"
+    PUT = "PUT"
+    PATCH = "PATCH"
+    DELETE = "DELETE"
