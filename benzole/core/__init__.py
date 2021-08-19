@@ -1,3 +1,3 @@
 from .view import (
-    DefaultView
+    BenzoleView
 )

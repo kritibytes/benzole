@@ -1,6 +1,6 @@
 import os
 from typing import Any, List
-from .types import IRoute
+from .types import Route
 import importlib.util
 
 slash: str = os.path.join('a', '')[1:]
@@ -20,8 +20,8 @@ def files_mapper(src_dir: str = "src") -> List[str]:
     return files
 
 
-def routes_mapper(files_map: List[str]) -> List[IRoute]:
-    routes: List[IRoute] = []
+def routes_mapper(files_map: List[str]) -> List[Route]:
+    routes: List[Route] = []
 
     for file in files_map:
         route: List[str] = file[file.find('src/') + 3:].split(slash)

@@ -9,13 +9,13 @@ from typing import (
 from enum import Enum
 
 
-class IRoute(TypedDict):
+class Route(TypedDict):
     url: str
     handler: Any
 
 
-IHeader = Dict[str, str]
-IHeaderList = List[Tuple[str, str]]
+Header = Dict[str, str]
+HeaderList = List[Tuple[str, str]]
 
 
 class HTTP_Method(Enum):

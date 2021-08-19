@@ -1,13 +1,13 @@
 import os
 import unittest
-from benzole import DefaultView
+from benzole import BenzoleView
 from benzole.core.response import Response
 
 
 class TestView(unittest.TestCase):
 
     def test_default_view(self):
-        class ExampleView(DefaultView):
+        class ExampleView(BenzoleView):
             pass
 
         obj = ExampleView()
